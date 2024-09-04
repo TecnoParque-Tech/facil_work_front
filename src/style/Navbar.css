@@ -1,0 +1,22 @@
+div{
+  padding: .4rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2 {
+  color: white;
+  font-weight: 400;
+}
+
+span {
+  font-weight: bold;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}

@@ -1,12 +1,14 @@
 div{
+  margin:10px;
   padding: .4rem;
-  background-color: black;
+  background-color: rgb(40, 38, 49);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 10px;
 }
 
-h2 {
+h1 {
   color: white;
   font-weight: 400;
 }
@@ -19,4 +21,5 @@ a {
   color: white;
   text-decoration: none;
   margin-right: 1rem;
+  font-weight: bold;
 }

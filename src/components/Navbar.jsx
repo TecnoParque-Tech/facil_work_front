@@ -1,26 +1,125 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/jsx-no-undef */
-import React from "react";
-import "./../style/Navbar.css";
+import React, { useState } from "react";
+import styled from "styled-components";
 import BurguerButton from "./BurguerButton";
 
 function Navbar() {
+
+  const [clicked, setClicked] = useState(false);
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
   return (
     <>
       <NavContainer>
         <h1>
           Facil <span>work</span>
         </h1>
-        <div>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+        <div className={`links ${clicked ? "active" : ""}`}>
+          <a onClick={handleClick} href="/">Home</a>
+          <a onClick={handleClick} href="/">About</a>
+          <a onClick={handleClick} href="/">Services</a>
+          <a onClick={handleClick} href="/">Contact</a>
         </div>
-        <BurguerButton />
+        <div class="burguer">
+          <BurguerButton clicked={clicked} handleClick={handleClick} />
+        </div>
+        <BgDvi className={`initial ${clicked ? " active" : ''}`}></BgDvi>
       </NavContainer>
     </>
   );
 }
 
 export default Navbar;
+
+const NavContainer = styled.nav`
+  margin: 10px;
+  padding: .4rem;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: bold;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 400;
+    span {
+      font-weight: bold;
+    }
+  }
+
+ .links{
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all .5s ease;
+    a{
+      color: white;
+      font-size: 2rem;
+      display: block;
+    }
+      
+    @media (min-width: 768px){
+      position: initial;
+      margin: 0;
+      a{
+        font-size: 1rem;
+        color: white;
+        display: inline;
+      }
+      display: block;
+    }
+  }
+
+  .links.active {
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    a{
+      color: gray;
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .burguer {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+`
+const BgDvi = styled.div`
+  background-color: black;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all .6s ease ;
+  
+  &.active{
+    border-radius: 0 0 80% 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`

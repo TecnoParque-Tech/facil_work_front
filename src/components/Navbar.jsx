@@ -15,10 +15,11 @@ function Navbar() {
           Facil <span>work</span>
         </h1>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <a onClick={handleClick} href="/">Home</a>
-          <a onClick={handleClick} href="/">About</a>
-          <a onClick={handleClick} href="/">Services</a>
-          <a onClick={handleClick} href="/">Contact</a>
+          <a onClick={handleClick} href="/">Inicio</a>
+          <a onClick={handleClick} href="/ info">Perfiles</a>
+          <a onClick={handleClick} href="/">Servicios</a>
+          <a onClick={handleClick} href="/ contact">Contacto</a>
+          <a onClick={handleClick} href="/ login">Salir</a>
         </div>
         <div class="burguer">
           <BurguerButton clicked={clicked} handleClick={handleClick} />
@@ -93,7 +94,7 @@ const NavContainer = styled.nav`
     right: 0;
     text-align: center;
     a{
-      color: gray;
+      color: white;
       font-size: 2rem;
       margin-top: 1rem;
     }
@@ -106,7 +107,7 @@ const NavContainer = styled.nav`
   }
 `
 const BgDvi = styled.div`
-  background-color: black;
+  background-color: gray;
   position: absolute;
   top: -1000px;
   left: -1000px;

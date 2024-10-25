@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 //import { Link } from 'react-router-dom';
 
-import Navbar from './Navbar';
 import InfoContact from '../containers/InfoContac';
 
 const Search = () =>{

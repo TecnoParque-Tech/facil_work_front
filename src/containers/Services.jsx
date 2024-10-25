@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import CardServices from "../components/CardServices";
-import Navbar from "../components/Navbar";
 
 function InfoContact() {
   return (

@@ -26,7 +26,6 @@ const ContactForm = () => {
 
   return (
     <>
-      <Navbar />
       <FormContainer onSubmit={handleSubmit}>
         <Label htmlFor="name">Nombre:</Label>
         <Input
@@ -77,7 +76,7 @@ export default ContactForm;
 
 const FormContainer = styled.form`
   display: flex;
-  background-color: #333;
+  background-color: gray;
   border-radius: 8px;
   flex-direction: column;
   width: 90%;
@@ -135,7 +134,7 @@ const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: black;
+    background-color: rgb(43, 58, 73);
     color: white;
   }
 

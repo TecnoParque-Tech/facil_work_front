@@ -15,9 +15,8 @@ function Navbar() {
           Facil <span>work</span>
         </h1>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <a onClick={handleClick} href="/">Inicio</a>
-          <a onClick={handleClick} href="/ info">Perfiles</a>
-          <a onClick={handleClick} href="/">Servicios</a>
+          <a onClick={handleClick} href="/ search">Inicio</a>
+          <a onClick={handleClick} href="/ services">Servicios</a>
           <a onClick={handleClick} href="/ contact">Contacto</a>
           <a onClick={handleClick} href="/ login">Salir</a>
         </div>
@@ -35,7 +34,7 @@ export default Navbar;
 const NavContainer = styled.nav`
   margin: 10px;
   padding: .4rem;
-  background-color: #333;
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,11 +45,12 @@ const NavContainer = styled.nav`
     text-decoration: none;
     margin-right: 1rem;
     font-weight: bold;
+    
   }
 
   h1 {
     color: white;
-    font-weight: 400;
+    font-weight: 100;
     span {
       font-weight: bold;
     }
@@ -65,11 +65,15 @@ const NavContainer = styled.nav`
     margin-right: auto;
     text-align: center;
     transition: all .5s ease;
+
     a{
       color: white;
       font-size: 2rem;
       display: block;
+      
     }
+   
+
       
     @media (min-width: 768px){
       position: initial;

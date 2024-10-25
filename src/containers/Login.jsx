@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import GoogleIcon from "../assets/IconoGoogle.png";
+
 
 const Login = () => {
   return (
@@ -15,10 +17,13 @@ const Login = () => {
         <Input type="text" placeholder="Usuario" />
         <Input type="password" placeholder="Contraseña" />
         <Button>
-          <StyledLink to="/ navbar">Login</StyledLink>
+          <StyledLink to="/ search">Login</StyledLink>
         </Button>
         <Button>
           <StyledLink to="/ register">No tengo cuenta</StyledLink>
+        </Button>
+        <Button as="a" href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&ifkv=AcMMx-cfJQAwc0RDsimf-Jj68KpbAACdkVFt4PdVVjzSt6pZH2rN5DNDct2ZGqbUBdNxXUu4JvWc&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+          <img src={GoogleIcon} alt="Google Login" />
         </Button>
       </LoginForm>
     </LoginContainer>
@@ -33,13 +38,13 @@ const LoginContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #333;
+  background-color: rgb(43, 58, 73);
 `;
 
 const Title = styled.h1`
   h1 {
     color: white;
-    font-weight: 400;
+    font-weight: 100;
     margin: 10px;
     span {
       font-weight: bold;
@@ -73,7 +78,7 @@ const Input = styled.input`
 
 const Button = styled.button`
   padding: 10px;
-  background-color: black;
+  background-color: rgb(43, 58, 73);
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -82,6 +87,12 @@ const Button = styled.button`
   cursor: pointer;
   margin: 5px;
   width: 100%;
+   
+  img {
+    width: 20px;
+    display: flex;
+    margin: 0 auto;
+  }
 
   &:hover {
     background-color: gray;

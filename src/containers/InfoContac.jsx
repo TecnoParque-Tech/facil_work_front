@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import Navbar from "../components/Navbar";
 import CardContact from "../components/CardContact";
+import Navbar from "../components/Navbar";
 
 function InfoContact() {
   return (
     <>
-      <Navbar />
+    
       <Info>
         <div className="principal-container">
-          <h1>!Personas disponibles para contactar¡</h1>
           <CardContact
             name="Santiago Leon"
             country="Colombia"
@@ -53,6 +52,7 @@ function InfoContact() {
 }
 
 export default InfoContact;
+
 const Info = styled.div`
   margin: 0;
   padding: 0;
@@ -62,15 +62,6 @@ const Info = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  h1 {
-    max-width: 940px;
-    font-size: 2.5em;
-    font-family: lato, sans-serif;
-    font-weight: 700;
-    line-height: 1.1;
-    margin: 40px 0;
-  }
 
   .principal-container {
     width: 100%;

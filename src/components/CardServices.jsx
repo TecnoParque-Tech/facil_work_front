@@ -2,79 +2,74 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import WhatsappIcon from "../assets/IconWhatsapp.png";
 
-function CardContact(props) {
+
+
+function CardServices(props) {
   return (
-    <Contact>
+    <Service>
+      <div className="card-text-info">
       <img
-        className="image-contact"
+        className="image-services"
         src={require(`../assets/Imagen ${props.image}.jpg`)}
         alt="Photo"
       />
-      <div className="card-text-contact">
-        <p className="name-testimony">
-          <strong>{props.name}</strong> en {props.country}
+        <p className="name-service">
+          <h1><strong>{props.name}</strong></h1>
         </p>
-        <p className="job-testimony">
-          {props.job} en <strong>{props.company}</strong>
-        </p>
-        <p className="text-testimony">"{props.testimony}"</p>
+        <p className="text-service">{props.testimony}</p>
       </div>
       <Button>
-        <StyledLink to="/">Perfil</StyledLink>
+        <StyledLink to="/ InfoContac">Perfiles</StyledLink>
       </Button>
-      <Button as="whatsapp" href="/ ">
-        <img src={WhatsappIcon} alt="Whatsapp Contact" />
-      </Button>
-    </Contact>
+    </Service>
   );
 }
 
-export default CardContact;
+export default CardServices;
 
-const Contact = styled.div`
-  width: 1170px;
-  height: 368px;
-  margin: 10px 10px 50px;
-  display: flex;
+const Service = styled.div`
+  width: auto;
+  height: auto;
+  margin: 10px 10px 10px;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 50%);
+  border-radius: 20px;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 100%);
 
-  .image-contact {
+  .image-services {
     max-width: 50%;
     max-height: 50%;
+    margin: 10px;
   }
 
-  .card-text-contact {
+  .card-text-info {
     text-align: center;
-    padding: 40px;
+    padding: auto;
     font-family: lato, sans-serif;
-    font-weight: 400;
-    line-height: 1.5rem;
+    font-weight: 10;
+    line-height: 1.rem;
   }
 
   .name-testimony {
     font-size: 1.3rem;
   }
 
-  .job-testimony {
+  .job-services {
     font-size: 1.3rem;
     margin-top: 15px;
     padding-bottom: 30px;
   }
 
-  .text-testimony {
+  .text-services {
     font-size: 1.1rem;
-    text-align: justify;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 100%;
+    width: auto;
     height: auto;
 
     .card-text-contact {
@@ -107,38 +102,20 @@ const Button = styled.button`
   text-decoration: none;
   color: white;
   font-weight: bold;
+  display: inline-block;
   border: none;
+  display: block;
   border-radius: 10px;
   cursor: pointer;
-  margin: 5px;
-  width: 100%;
-
-  img {
-    width: auto;
-    max-width: 17px; 
-    height: auto;
-    display: flex;
-    margin: 0 auto;
-  }
+  margin: 5px auto;
+  width: 50%;
 
   &:hover {
     background-color: gray;
   }
 
-  @media (max-width: 768px) {
-    padding: 10px;
-    font-size: 0.9rem;
-    width: 50%;
-  }
-
-  @media (max-width: 480px) {
-    padding: 6px;
-    font-size: 0.8rem;
-
-    img {
-      max-width: 17px;
-      background-color: black;
-    }
+  @media (max-width: 600px) {
+    padding: 8px;
   }
 `;
 

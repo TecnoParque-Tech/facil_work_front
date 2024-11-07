@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,11 +25,12 @@ const ContactForm = () => {
   return (
     <>
       <FormContainer onSubmit={handleSubmit}>
+        <Title>Cuentanos como podemos ayudarte</Title>
         <Label htmlFor="name">Nombre:</Label>
         <Input
           type="text"
           id="name"
-          name="Nombre"
+          name="name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -91,6 +91,11 @@ const FormContainer = styled.form`
   }
 `;
 
+const Title = styled.h2`
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+`;
 
 const Label = styled.label`
   margin-bottom: 8px;
@@ -126,7 +131,7 @@ const Textarea = styled.textarea`
 const Button = styled.button`
   padding: 10px 15px;
   background-color: white;
-  color: #333;
+  color: rgb(43, 58, 73);
   font-weight: bold;
   border: none;
   border-radius: 4px;

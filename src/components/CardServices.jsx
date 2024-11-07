@@ -20,7 +20,7 @@ function CardServices(props) {
         <p className="text-service">{props.testimony}</p>
       </div>
       <Button>
-        <StyledLink to="/ InfoContac">Perfiles</StyledLink>
+        <StyledLink to={props.perfil}>Perfiles</StyledLink>
       </Button>
     </Service>
   );

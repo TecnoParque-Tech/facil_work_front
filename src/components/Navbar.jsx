@@ -39,6 +39,7 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 100);
 
   a {
     color: white;

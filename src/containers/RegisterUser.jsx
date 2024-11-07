@@ -6,12 +6,7 @@ const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
-    birthDate: "",
-    gender: "",
-    phone: "",
     email: "",
-    Photo: "",
-    description: "",
     password: "",
   });
 
@@ -25,6 +20,13 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Validar que todos los campos estén completos
+    for (const key in formData) {
+      if (formData[key] === "") {
+        alert(`El campo ${key} es obligatorio`);
+        return;
+      }
+    }
     // Aquí puedes manejar el envío del formulario
     console.log(formData);
   };
@@ -54,38 +56,10 @@ const Register = () => {
           onChange={handleChange}
         />
         <Input
-          type="date"
-          name="birthDate"
-          placeholder="BirthDate"
-          value={formData.birthDate}
-          onChange={handleChange}
-        />
-        <Input
-          type="tel"
-          name="phone"
-          placeholder="Phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        <Input
           type="email"
           name="email"
           placeholder="Email"
           value={formData.email}
-          onChange={handleChange}
-        />
-        <Input
-          type="file"
-          name="Photo"
-          placeholder="Foto"
-          value={formData.Photo}
-          onChange={handleChange}
-        />
-        <Input
-          type="text"
-          name="description"
-          placeholder="Descripción de tu perfil"
-          value={formData.description}
           onChange={handleChange}
         />
         <Input
@@ -100,6 +74,9 @@ const Register = () => {
         </Button>
         <Button>
         <StyledLink to="/ login">Ya tengo cuenta</StyledLink>
+        </Button>
+        <Button type="button">
+          <StyledLink to={'/ Preregister'}>Atras</StyledLink>
         </Button>
       </Form>
     </FormContainer>
@@ -126,7 +103,7 @@ const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #333;
+  background-color: rgb(43, 58, 73);
   padding: 20px;
 `;
 
@@ -140,11 +117,10 @@ const Form = styled.form`
   box-shadow: 0 0 30px black;
   border-radius: 10px;
 
-   h3 {
-    color: #333;
-    position: center;
+  h3 {
+    color: rgb(43, 58, 73);
+    text-align: center;
     margin-top: 0;
-    display: inline;
   }
 
   @media (max-width: 800px) {
@@ -166,7 +142,7 @@ const Input = styled.input`
 
 const Button = styled.button`
   padding: 10px;
-  background-color: black;
+  background-color: rgb(43, 58, 73);
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -189,4 +165,3 @@ const StyledLink = styled(Link)`
 text-decoration: none;
 color: white;
 `;
-

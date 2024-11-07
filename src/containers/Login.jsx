@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import GoogleIcon from "../assets/IconoGoogle.png";
+//import GoogleIcon from "../assets/IconoGoogle.png";
 
 
 const Login = () => {
@@ -20,11 +20,13 @@ const Login = () => {
           <StyledLink to="/ search">Login</StyledLink>
         </Button>
         <Button>
-          <StyledLink to="/ register">No tengo cuenta</StyledLink>
-        </Button>
-        <Button as="a" href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&ifkv=AcMMx-cfJQAwc0RDsimf-Jj68KpbAACdkVFt4PdVVjzSt6pZH2rN5DNDct2ZGqbUBdNxXUu4JvWc&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+          <StyledLink to="/ preregister">No tengo cuenta</StyledLink>
+          </Button>
+        {/*
+         <Button as="a" href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&ifkv=AcMMx-cfJQAwc0RDsimf-Jj68KpbAACdkVFt4PdVVjzSt6pZH2rN5DNDct2ZGqbUBdNxXUu4JvWc&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
           <img src={GoogleIcon} alt="Google Login" />
         </Button>
+        */}
       </LoginForm>
     </LoginContainer>
   );

@@ -12,24 +12,28 @@ function InfoContact() {
             name="Fontaneria"
             image="2"
             testimony= "Aqui podras encontrar todos los perfiles relacionado con arreglos de acueductos y alcantarillados"
+            perfil="/ perfilFontanero "
           />
 
           <CardServices
             name="Ayuda en casa"
             image="3"
             testimony= "Aqui podras encontrar la ayuda que necesitas para algun problema en tu hogar"
+            perfil="/ PerfilAyuda"
           />
 
           <CardServices
             name="Electricidad"
             image="4"
             testimony= "Aqui podras encontrar todo lo relacionado con arreglos de electricidad"
+            perfil="/ PerfilElectricidad"
           />
 
           <CardServices
             name="Construccion"
             image="5"
             testimony= "Aqui podras encontrar todo lo relacionado con la construccion"
+            perfil="/ PerfilConstruccion"
           />
         </div>
       </Info>

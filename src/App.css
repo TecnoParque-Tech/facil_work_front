@@ -4,7 +4,7 @@ body{
 
 .app-container {
   background-color: rgb(43, 58, 73);
-  height: 100vh; /* Asegúrate de que el fondo cubra toda la ventana */
+  height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
